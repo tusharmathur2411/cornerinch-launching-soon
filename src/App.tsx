@@ -33,8 +33,12 @@ export default function App() {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const response = await fetch("https://script.google.com/macros/s/AKfycbycZUQxZbEuAqnkClGx2HFCqVvZpvd07G-hNLATgr9ECjvNbblL0B4DQXbgisoTOqsa/exec", {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ email })
+    });
 
     toast.success(
       "Thank you for joining our early community!",
@@ -111,7 +115,7 @@ export default function App() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 bg-white/95 backdrop-blur-sm border-white/40 placeholder:text-gray-500"
+                  className="flex-1 bg-white/95 backdrop-blur-sm border-white/40 placeholder:text-gray-500 min-h-40"
                 />
                 <Button
                   type="submit"
