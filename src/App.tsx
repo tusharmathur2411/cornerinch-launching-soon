@@ -6,8 +6,9 @@ import {
   Facebook,
   Twitter,
   Sparkles,
-  Heart,
-  Leaf,
+  PenTool,
+  ShieldCheck,
+  Award,
 } from "lucide-react";
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
@@ -155,7 +156,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-                <Heart
+                <PenTool
                   className="w-8 h-8"
                   style={{ color: "var(--gray-700)" }}
                 />
@@ -167,14 +168,13 @@ export default function App() {
                 Design Excellence
               </h3>
               <p style={{ color: "var(--gray-600)" }}>
-                Every piece is handpicked for exceptional design
-                and quality
+                Every item is carefully selected by design professionals for its craftsmanship and style.
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-                <Leaf
+                <ShieldCheck
                   className="w-8 h-8"
                   style={{ color: "var(--gray-700)" }}
                 />
@@ -183,17 +183,16 @@ export default function App() {
                 className="font-serif text-xl mb-2"
                 style={{ color: "var(--gray-900)" }}
               >
-                Sustainable Choice
+                Quality You Can Trust
               </h3>
               <p style={{ color: "var(--gray-600)" }}>
-                Supporting creators who value sustainability and
-                ethical practices
+                Only the highest standards of materials and construction make the cut.
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-                <Sparkles
+                <Award
                   className="w-8 h-8"
                   style={{ color: "var(--gray-700)" }}
                 />
@@ -202,11 +201,10 @@ export default function App() {
                 className="font-serif text-xl mb-2"
                 style={{ color: "var(--gray-900)" }}
               >
-                Unique Finds
+                Verified Premium Brands
               </h3>
               <p style={{ color: "var(--gray-600)" }}>
-                Discover one-of-a-kind pieces you won't find
-                anywhere else
+                Shop with confidence — every creator and brand is vetted for authenticity.
               </p>
             </div>
           </div>
@@ -310,7 +308,7 @@ export default function App() {
           </form>
 
           {/* Social Media Icons */}
-          <div className="flex items-center justify-center gap-6">
+          {/* <div className="flex items-center justify-center gap-6">
             <a
               href="#"
               className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
@@ -351,7 +349,7 @@ export default function App() {
                 style={{ color: "var(--gray-700)" }}
               />
             </a>
-          </div>
+          </div> */}
         </motion.div>
       </section>
 
