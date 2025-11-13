@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Analytics } from "@vercel/analytics/react"
 import {
   Mail,
   Instagram,
@@ -53,6 +54,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
+      <Analytics />
       <Toaster />
 
       {/* Hero Section */}
