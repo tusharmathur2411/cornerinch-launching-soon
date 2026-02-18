@@ -24,9 +24,8 @@ export default function App() {
   const [email, setEmail] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
-  // Set launch date to 30 days from now
-  const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() + 30);
+  // Set launch date to 11:11 AM IST on Feb 19, 2026
+  const launchDate = new Date('2026-02-19T11:11:00+05:30');
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -81,12 +80,18 @@ export default function App() {
               <div className="h-px w-24 bg-white/40 mx-auto" />
             </div>
 
+            
             {/* Launching Soon Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8">
-              <Sparkles className="w-8 h-8 text-white" />
+              {/* <Sparkles className="w-8 h-8 text-white" /> */}
               <span className="text-sm text-white uppercase tracking-widest text-xl">
-                Launching Soon
+                Launching In
               </span>
+            </div>
+              
+            {/* Countdown Timer */}
+            <div className="mb-8">
+              <CountdownTimer targetDate={launchDate} />
             </div>
 
             {/* Headline */}
